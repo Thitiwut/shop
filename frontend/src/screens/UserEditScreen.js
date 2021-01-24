@@ -50,7 +50,7 @@ const UserEditScreen = ({ match, history }) => {
   return (
     <>
       <Link to='/admin/userlist' className='btn btn-light my-3'>
-        Go Back
+        ย้อนกลับ
       </Link>
       <FormContainer>
         <h1>Edit User</h1>

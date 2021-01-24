@@ -31,7 +31,7 @@ const HomeScreen = ({ match }) => {
         <ProductCarousel />
       ) : (
         <Link to='/' className='btn btn-light'>
-          Go Back
+          ย้อนกลับ
         </Link>
       )}
       <h1>สินค้าเข้าใหม่</h1>

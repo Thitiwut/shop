@@ -32,10 +32,10 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
-        <h1>Shopping Cart</h1>
+        <h1>ตะกร้าสินค้า</h1>
         {cartItems.length === 0 ? (
           <Message>
-            Your cart is empty <Link to='/'>Go Back</Link>
+            ไม่มีของในตะกร้า <Link to='/'>ย้อนกลับ</Link>
           </Message>
         ) : (
           <ListGroup variant='flush'>
@@ -86,10 +86,10 @@ const CartScreen = ({ match, location, history }) => {
           <ListGroup variant='flush'>
             <ListGroup.Item>
               <h2>
-                Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
-                items
+                จำนวนสินค้า ({cartItems.reduce((acc, item) => acc + item.qty, 0)})
+                ชิ้น
               </h2>
-              $
+              ฿
               {cartItems
                 .reduce((acc, item) => acc + item.qty * item.price, 0)
                 .toFixed(2)}
@@ -101,7 +101,7 @@ const CartScreen = ({ match, location, history }) => {
                 disabled={cartItems.length === 0}
                 onClick={checkoutHandler}
               >
-                Proceed To Checkout
+                 ทำรายการให้เสร็จสิ้น
               </Button>
             </ListGroup.Item>
           </ListGroup>
