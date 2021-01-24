@@ -74,11 +74,11 @@ const ProductListScreen = ({ history, match }) => {
     <>
       <Row className='align-items-center'>
         <Col>
-          <h1>สินค้า</h1>
+          <h1>Products</h1>
         </Col>
         <Col className='text-right'>
           <Button className='my-3' onClick={createProductHandler}>
-            <i className='fas fa-plus'></i> สร้างสินค้า
+            <i className='fas fa-plus'></i> Create Product
           </Button>
         </Col>
       </Row>
@@ -95,11 +95,11 @@ const ProductListScreen = ({ history, match }) => {
           <Table striped bordered hover responsive className='table-sm'>
             <thead>
               <tr>
-                <th>ไอดี</th>
-                <th>ชื่อ</th>
-                <th>ราคา</th>
-                <th>หมวดหมู่</th>
-                <th>แบรนด์</th>
+                <th>ID</th>
+                <th>NAME</th>
+                <th>PRICE</th>
+                <th>CATEGORY</th>
+                <th>BRAND</th>
                 <th></th>
               </tr>
             </thead>
