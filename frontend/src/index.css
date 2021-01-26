@@ -32,14 +32,14 @@ h2 {
 }
 
 .carousel-caption h2 {
-  color: #fff;
+  color: #333;
 }
 
 .carousel img {
   height: 300px;
   padding: 30px;
   margin: 40px;
-  border-radius: 50%;
+  /* border-radius: 50%; */
   margin-left: auto;
   margin-right: auto;
 }
@@ -51,3 +51,4 @@ h2 {
     font-size: 2.5vw;
   }
 }
+
