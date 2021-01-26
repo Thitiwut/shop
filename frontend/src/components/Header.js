@@ -20,10 +20,9 @@ const Header = () => {
     <header>
       <Navbar
         bg="light"
-        variant="default"
         expand="lg"
         collapseOnSelect
-        style={{ borderTopWidth: 10, borderColor: "#F0A1BF" }}
+        style={{ borderTopWidth: 10, borderColor: "#f2a7ca" }}
       >
         <Container>
           <LinkContainer to="/">
