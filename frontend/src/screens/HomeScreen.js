@@ -7,7 +7,8 @@ import Message from '../components/Message'
 import Loader from '../components/Loader'
 import Paginate from '../components/Paginate'
 import ProductCarousel from '../components/ProductCarousel'
-import PageCarousel from '../components/PageCarousel'
+import PreCarousel from '../components/PreCarousel'
+import Jumbo from '../components/Jumbo'
 import Meta from '../components/Meta'
 import { listProducts } from '../actions/productActions'
 
@@ -29,8 +30,10 @@ const HomeScreen = ({ match }) => {
     <>
       <Meta />
       {!keyword ? (
-        // <ProductCarousel />
-        <PageCarousel/>
+        <>
+        <Jumbo/>
+        <PreCarousel />
+        </>
       ) : (
         <Link to='/' className='btn btn-light'>
           ย้อนกลับ

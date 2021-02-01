@@ -4,18 +4,19 @@ import { Spinner } from 'react-bootstrap'
 const Loader = () => {
   return (
     <Spinner
-      animation='border'
-      role='status'
+      animation="grow"
+      role="status"
       style={{
-        width: '100px',
-        height: '100px',
-        margin: 'auto',
-        display: 'block',
+        width: "100px",
+        height: "100px",
+        margin: "auto",
+        display: "block",
       }}
+      variant="success"
     >
-      <span className='sr-only'>Loading...</span>
+      <span className="sr-only">Loading...</span>
     </Spinner>
-  )
+  );
 }
 
 export default Loader

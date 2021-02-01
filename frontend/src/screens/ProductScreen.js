@@ -59,13 +59,13 @@ const ProductScreen = ({ history, match }) => {
 
   return (
     <>
-      <Link className='btn btn-light my-3' to='/'>
+      <Link className="btn btn-light my-3" to="/">
         ย้อนกลับ
       </Link>
       {loading ? (
         <Loader />
       ) : error ? (
-        <Message variant='danger'>{error}</Message>
+        <Message variant="danger">{error}</Message>
       ) : (
         <>
           <Meta title={product.name} />
@@ -74,7 +74,7 @@ const ProductScreen = ({ history, match }) => {
               <Image src={product.image} alt={product.name} fluid />
             </Col>
             <Col md={3}>
-              <ListGroup variant='flush'>
+              <ListGroup variant="flush">
                 <ListGroup.Item>
                   <h3>{product.name}</h3>
                 </ListGroup.Item>
@@ -92,7 +92,7 @@ const ProductScreen = ({ history, match }) => {
             </Col>
             <Col md={3}>
               <Card>
-                <ListGroup variant='flush'>
+                <ListGroup variant="flush">
                   <ListGroup.Item>
                     <Row>
                       <Col>ราคา:</Col>
@@ -106,7 +106,7 @@ const ProductScreen = ({ history, match }) => {
                     <Row>
                       <Col>สถานะสินค้า:</Col>
                       <Col>
-                        {product.countInStock > 0 ? 'มีของ' : 'สินค้าหมด'}
+                        {product.countInStock > 0 ? "มีของ" : "สินค้าหมด"}
                       </Col>
                     </Row>
                   </ListGroup.Item>
@@ -117,7 +117,7 @@ const ProductScreen = ({ history, match }) => {
                         <Col>จำนวน</Col>
                         <Col>
                           <Form.Control
-                            as='select'
+                            as="select"
                             value={qty}
                             onChange={(e) => setQty(e.target.value)}
                           >
@@ -137,8 +137,8 @@ const ProductScreen = ({ history, match }) => {
                   <ListGroup.Item>
                     <Button
                       onClick={addToCartHandler}
-                      className='btn-block'
-                      type='button'
+                      className="btn-block"
+                      type="button"
                       disabled={product.countInStock === 0}
                     >
                       เพิ่มใส่ตะกร้า
@@ -152,7 +152,7 @@ const ProductScreen = ({ history, match }) => {
             <Col md={6}>
               <h2>รีวิว</h2>
               {product.reviews.length === 0 && <Message>ไม่มีรีวิว</Message>}
-              <ListGroup variant='flush'>
+              <ListGroup variant="flush">
                 {product.reviews.map((review) => (
                   <ListGroup.Item key={review._id}>
                     <strong>{review.name}</strong>
@@ -164,51 +164,52 @@ const ProductScreen = ({ history, match }) => {
                 <ListGroup.Item>
                   <h2>เขียนรีวิวจากผู้เคยใช้บริการ</h2>
                   {successProductReview && (
-                    <Message variant='success'>
+                    <Message variant="success">
                       Review submitted successfully
                     </Message>
                   )}
                   {loadingProductReview && <Loader />}
                   {errorProductReview && (
-                    <Message variant='danger'>{errorProductReview}</Message>
+                    <Message variant="danger">{errorProductReview}</Message>
                   )}
                   {userInfo ? (
                     <Form onSubmit={submitHandler}>
-                      <Form.Group controlId='rating'>
+                      <Form.Group controlId="rating">
                         <Form.Label>เรทติ้ง</Form.Label>
                         <Form.Control
-                          as='select'
+                          as="select"
                           value={rating}
                           onChange={(e) => setRating(e.target.value)}
                         >
-                          <option value=''>เลือกคะแนน...</option>
-                          <option value='1'>1 - ไม่ดี</option>
-                          <option value='2'>2 - เกือบดี</option>
-                          <option value='3'>3 - ดี</option>
-                          <option value='4'>4 - ดีมาก</option>
-                          <option value='5'>5 - เยี่ยมที่สุด</option>
+                          <option value="">เลือกคะแนน...</option>
+                          <option value="1">1 - ไม่ดี</option>
+                          <option value="2">2 - เกือบดี</option>
+                          <option value="3">3 - ดี</option>
+                          <option value="4">4 - ดีมาก</option>
+                          <option value="5">5 - เยี่ยมที่สุด</option>
                         </Form.Control>
                       </Form.Group>
-                      <Form.Group controlId='comment'>
+                      <Form.Group controlId="comment">
                         <Form.Label>ข้อความถึงผู้ขาย</Form.Label>
                         <Form.Control
-                          as='textarea'
-                          row='3'
+                          as="textarea"
+                          row="3"
                           value={comment}
                           onChange={(e) => setComment(e.target.value)}
                         ></Form.Control>
                       </Form.Group>
                       <Button
                         disabled={loadingProductReview}
-                        type='submit'
-                        variant='primary'
+                        type="submit"
+                        variant="primary"
                       >
                         ยืนยัน
                       </Button>
                     </Form>
                   ) : (
                     <Message>
-                      กรุณา <Link to='/login'>ลงชื่อเข้าใช้</Link> เพื่อเขียนรีวิว{' '}
+                      กรุณา <Link to="/login">ลงชื่อเข้าใช้</Link>{" "}
+                      เพื่อเขียนรีวิว{" "}
                     </Message>
                   )}
                 </ListGroup.Item>
@@ -218,7 +219,7 @@ const ProductScreen = ({ history, match }) => {
         </>
       )}
     </>
-  )
+  );
 }
 
 export default ProductScreen
